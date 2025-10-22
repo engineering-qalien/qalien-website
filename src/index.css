@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+  font-family: 'Syne', 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Syne', 'Montserrat', sans-serif;
+  font-weight: 400; /* Regular weight */
+}
+
+/* Syne Bold for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700; /* Bold weight */
+}
+
+/* Syne Regular for body text */
+p, span, div, label, input, textarea, button {
+  font-family: 'Syne', sans-serif;
+  font-weight: 400; /* Regular weight */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* Force white placeholder text */
+input::placeholder,
+textarea::placeholder {
+  color: #6B7280 !important; /* Light grey color */
+  opacity: 1 !important;
+}

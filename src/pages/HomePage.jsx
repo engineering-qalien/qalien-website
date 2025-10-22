@@ -69,30 +69,30 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Scrolling Marquee */}
-        <div className="relative z-10 py-4 overflow-hidden">
+        <div className="relative z-10 py-2 sm:py-4 overflow-hidden">
           <div className="animate-marquee whitespace-nowrap">
-            <span className="text-[#F2C94C] text-lg uppercase tracking-wider font-black">
+            <span className="text-[#F2C94C] text-sm sm:text-lg uppercase tracking-wider font-black">
               SOMETHING ALIEN. BUILT FOR BRANDS. POWERED BY SOMETHING ALIEN. BUILT FOR BRANDS. POWERED BY SOMETHING ALIEN. BUILT FOR BRANDS. POWERED BY SOMETHING ALIEN. BUILT FOR BRANDS.
             </span>
           </div>
         </div>
 
         {/* Main Hero Content */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6">
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6">
           {/* Bubble Structure - positioned to overlay the title */}
           <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
             <img 
               src="/1.png" 
               alt="Abstract bubble structure" 
-              className="w-[800px] h-[600px] object-contain opacity-85"
+              className="w-[200px] h-[150px] sm:w-[500px] sm:h-[400px] md:w-[800px] md:h-[600px] object-contain opacity-85"
               style={{
-                transform: 'translateY(-60px) translateX(180px)'
+                transform: 'translateY(-20px) translateX(60px)'
               }}
             />
           </div>
 
           {/* Main Title */}
-          <h1 className="relative z-20 text-8xl md:text-9xl font-black mb-8 leading-none" 
+          <h1 className="relative z-20 text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black mb-4 sm:mb-8 leading-none" 
               style={{
                 letterSpacing: '-0.02em'
               }}>
@@ -100,12 +100,12 @@ export default function HomePage() {
           </h1>
 
           {/* Descriptive Text */}
-          <p className="relative z-20 text-[#F2C94C] text-xl md:text-2xl uppercase tracking-wider max-w-4xl mx-auto leading-relaxed mb-24 mt-8">
+          <p className="relative z-20 text-[#F2C94C] text-sm sm:text-lg md:text-xl lg:text-2xl uppercase tracking-wider max-w-4xl mx-auto leading-relaxed mb-12 sm:mb-24 mt-4 sm:mt-8 px-4">
             A BRAND EXPERIENCE PLATFORM THAT ACCELERATES MODERN MARKETING TEAMS' ABILITY TO REVIEW AND APPROVE CREATIVE
           </p>
 
           {/* Call to Action Button */}
-          <div className="relative z-20 mt-16">
+          <div className="relative z-20 mt-8 sm:mt-16">
             <button 
               onClick={() => {
                 document.getElementById('waitlist')?.scrollIntoView({ 
@@ -113,34 +113,34 @@ export default function HomePage() {
                   block: 'start'
                 });
               }}
-              className="border border-[#38E28A] text-white px-8 py-4 text-lg hover:bg-[#38E28A] hover:text-[#0E1B2B] transition-all duration-300"
+              className="border border-[#38E28A] text-white px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg hover:bg-[#38E28A] hover:text-[#0E1B2B] transition-all duration-300"
             >
               Schedule a Demo
             </button>
           </div>
         </div>
       </section>
-      <section className="relative bg-gradient-to-b from-green-300 to-green-500 min-h-screen px-8 overflow-hidden flex flex-col justify-center">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 relative z-10 mb-16">
+      <section className="relative bg-gradient-to-b from-green-300 to-green-500 min-h-screen px-4 sm:px-8 overflow-hidden flex flex-col justify-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-20 relative z-10 mb-8 sm:mb-16">
           {/* Top Left Section */}
           <div className="relative z-20 flex justify-start">
             <div className="max-w-sm">
-              <h3 className="text-4xl font-bold mb-6 text-[#1F3440] text-left font-syne">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#1F3440] text-left font-syne">
                 CREATIVE REVIEW IN MINUTES, NOT DAYS
               </h3>
-              <p className="text-[#0E1B2B] text-lg leading-relaxed text-left font-montserrat">
+              <p className="text-[#0E1B2B] text-base sm:text-lg leading-relaxed text-left font-montserrat">
                 QAlien leverages AI visioning technology to cut creative review time from days to minutes, all while ensuring each asset is compliant across visual, verbal and legal standards.
               </p>
             </div>
           </div>
 
           {/* Top Right Section */}
-          <div className="relative z-20 flex justify-end">
+          <div className="relative z-20 flex justify-start md:justify-end">
             <div className="max-w-sm">
-              <h3 className="text-4xl font-bold mb-6 text-[#1F3440] text-right font-syne">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#1F3440] text-left md:text-right font-syne">
                 LIGHTWEIGHT, BUILT TO WIN
               </h3>
-              <p className="text-[#0E1B2B] text-lg leading-relaxed text-right font-montserrat">
+              <p className="text-[#0E1B2B] text-base sm:text-lg leading-relaxed text-left md:text-right font-montserrat">
                 Unlike other platforms, QAlien is lightweight and focused. We enable marketing teams to launch faster, stay consistent, and win across platforms.
               </p>
             </div>
@@ -150,10 +150,10 @@ export default function HomePage() {
         {/* Bottom Section */}
         <div className="max-w-4xl mx-auto relative z-20 flex justify-start">
           <div className="max-w-sm">
-            <h3 className="text-4xl font-bold mb-6 text-left text-[#1F3440] font-syne">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-left text-[#1F3440] font-syne">
               ANY FORMAT, ALWAYS IN CONTROL
             </h3>
-            <p className="text-[#0E1B2B] text-lg leading-relaxed text-left font-montserrat">
+            <p className="text-[#0E1B2B] text-base sm:text-lg leading-relaxed text-left font-montserrat">
               From logos, colors, and layout to tone, claims, and brand voice, QAlien ensures every asset aligns with your brand guidelines and creative briefs — especially across UGC, creator content, and AI-generated campaigns.
             </p>
           </div>
@@ -164,9 +164,9 @@ export default function HomePage() {
           <img 
             src="/3.png" 
             alt="Abstract bubble structure" 
-            className="w-[700px] h-[600px] object-contain"
+            className="w-[200px] h-[150px] sm:w-[500px] sm:h-[450px] md:w-[700px] md:h-[600px] object-contain"
             style={{
-              transform: 'translateX(-150px) translateY(50px)'
+              transform: 'translateX(-50px) translateY(25px)'
             }}
           />
         </div>
@@ -176,9 +176,9 @@ export default function HomePage() {
           <img 
             src="/4.png" 
             alt="Abstract bubble structure" 
-            className="w-[500px] h-[500px] object-contain"
+            className="w-[150px] h-[150px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] object-contain"
             style={{
-              transform: 'translateX(100px) translateY(-100px)'
+              transform: 'translateX(25px) translateY(-25px)'
             }}
           />
         </div>
@@ -190,43 +190,43 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section id="waitlist" className="relative bg-[#F2C94C] text-[#0E1B2B] py-24 px-8 min-h-screen overflow-hidden">
+      <section id="waitlist" className="relative bg-[#F2C94C] text-[#0E1B2B] py-12 sm:py-24 px-4 sm:px-8 min-h-screen overflow-hidden">
         {/* Bottom teal line */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#38E28A]"></div>
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-16 items-center relative z-10">
           {/* Left side - Title and Bubble */}
-          <div className="relative">
-            <div className="space-y-4">
-              <h2 className="text-6xl font-black text-[#0E1B2B] leading-none">JOIN</h2>
-              <h2 className="text-6xl font-black text-[#0E1B2B] leading-none">OUR</h2>
-              <h2 className="text-6xl font-black text-[#0E1B2B] leading-none">WAITLIST</h2>
+          <div className="relative order-1">
+            <div className="space-y-2 sm:space-y-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0E1B2B] leading-none">JOIN</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0E1B2B] leading-none">OUR</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0E1B2B] leading-none">WAITLIST</h2>
             </div>
             
             {/* Bubble Structure */}
-            <div className="absolute top-0 left-0 pointer-events-none opacity-80" style={{ transform: 'translateY(200px)' }}>
+            <div className="absolute top-0 left-0 pointer-events-none opacity-80" style={{ transform: 'translateY(50px)' }}>
               <img 
                 src="/2.png" 
                 alt="Abstract bubble structure" 
-                className="w-[400px] h-[400px] object-contain"
+                className="w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] object-contain"
               />
             </div>
           </div>
 
           {/* Right side - Form */}
-          <div className="relative z-20">
-            <form onSubmit={handleSubmit} className="space-y-8 max-w-md">
+          <div className="relative z-20 order-2">
+            <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8 max-w-md">
               {/* Name Fields */}
               <div>
-                <label className="block text-lg font-medium mb-2 text-[#0E1B2B]">Name (required)</label>
-                <div className="grid grid-cols-2 gap-4">
+                <label className="block text-base sm:text-lg font-medium mb-2 text-[#0E1B2B]">Name (required)</label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input 
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleInputChange}
                     placeholder="First Name" 
                     required
-                    className="w-full border-b-2 border-[#0E1B2B] bg-transparent py-2 focus:outline-none focus:border-[#0E1B2B] text-[#0E1B2B] placeholder:text-gray-400" 
+                    className="w-full border-b-2 border-[#0E1B2B] bg-transparent py-2 focus:outline-none focus:border-[#0E1B2B] text-[#0E1B2B] placeholder:text-gray-400 text-base" 
                   />
                   <input 
                     name="lastName"
@@ -234,14 +234,14 @@ export default function HomePage() {
                     onChange={handleInputChange}
                     placeholder="Last Name" 
                     required
-                    className="w-full border-b-2 border-[#0E1B2B] bg-transparent py-2 focus:outline-none focus:border-[#0E1B2B] text-[#0E1B2B] placeholder:text-gray-400" 
+                    className="w-full border-b-2 border-[#0E1B2B] bg-transparent py-2 focus:outline-none focus:border-[#0E1B2B] text-[#0E1B2B] placeholder:text-gray-400 text-base" 
                   />
                 </div>
               </div>
 
               {/* Email Field */}
               <div>
-                <label className="block text-lg font-medium mb-2 text-[#0E1B2B]">Email (required)</label>
+                <label className="block text-base sm:text-lg font-medium mb-2 text-[#0E1B2B]">Email (required)</label>
                 <input 
                   name="email"
                   type="email"
@@ -249,20 +249,20 @@ export default function HomePage() {
                   onChange={handleInputChange}
                   placeholder="Email" 
                   required
-                  className="w-full border-b-2 border-[#0E1B2B] bg-transparent py-2 focus:outline-none focus:border-[#0E1B2B] text-[#0E1B2B] placeholder:text-gray-400" 
+                  className="w-full border-b-2 border-[#0E1B2B] bg-transparent py-2 focus:outline-none focus:border-[#0E1B2B] text-[#0E1B2B] placeholder:text-gray-400 text-base" 
                 />
               </div>
 
               {/* Company Field */}
               <div>
-                <label className="block text-lg font-medium mb-2 text-[#0E1B2B]">Company (required)</label>
+                <label className="block text-base sm:text-lg font-medium mb-2 text-[#0E1B2B]">Company (required)</label>
                 <input 
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
                   placeholder="Company" 
                   required
-                  className="w-full border-b-2 border-[#0E1B2B] bg-transparent py-2 focus:outline-none focus:border-[#0E1B2B] text-[#0E1B2B] placeholder:text-gray-400" 
+                  className="w-full border-b-2 border-[#0E1B2B] bg-transparent py-2 focus:outline-none focus:border-[#0E1B2B] text-[#0E1B2B] placeholder:text-gray-400 text-base" 
                 />
               </div>
 
@@ -283,7 +283,7 @@ export default function HomePage() {
                 <button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="border-2 border-[#38E28A] text-[#38E28A] px-8 py-4 text-lg hover:bg-[#38E28A] hover:text-[#F2C94C] transition-all duration-300 bg-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full sm:w-auto border-2 border-[#38E28A] text-[#38E28A] px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg hover:bg-[#38E28A] hover:text-[#F2C94C] transition-all duration-300 bg-transparent disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Reserve My Spot'}
                 </button>

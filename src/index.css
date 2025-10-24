@@ -71,3 +71,208 @@ textarea::placeholder {
     margin-top: 2rem;
   }
 }
+
+/* Hero bubble responsive positioning */
+@media (max-width: 640px) {
+  .hero-bubble {
+    transform: translateY(-150px) translateX(60px) !important;
+  }
+}
+
+@media (min-width: 641px) {
+  .hero-bubble {
+    transform: translateY(-100px) translateX(190px) !important;
+  }
+}
+
+/* Waitlist bubble responsive positioning */
+@media (max-width: 640px) {
+  .waitlist-bubble {
+    transform: translateY(20px) translateX(90px) !important;
+    width: 250px !important;
+    height: 250px !important;
+    z-index: 1 !important;
+  }
+  
+  .waitlist-text {
+    transform: translateY(10px) !important;
+    z-index: 10 !important;
+    position: relative !important;
+  }
+  
+  .waitlist-form {
+    transform: translateY(40px) !important;
+    z-index: 10 !important;
+    position: relative !important;
+  }
+}
+
+@media (min-width: 641px) {
+  .waitlist-bubble {
+    transform: translateY(80px) translateX(-30px) !important;
+  }
+}
+
+/* Section 2 bubble responsive positioning - Mobile First */
+@media (max-width: 768px) {
+  #section-2 { 
+    position: relative; 
+    overflow: visible !important; 
+  }
+  
+  /* Ensure bubble images are visible and properly positioned */
+  #section-2 img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 0.8 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+  }
+  
+  /* Target bubble elements specifically */
+  #section-2 .section2-left-bubble,
+  #section-2 .section2-right-bubble,
+  #section-2 .decal-large,
+  #section-2 .decal-small {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+  }
+
+  /* Position the bubble containers */
+  #section-2 .absolute {
+    position: absolute !important;
+    pointer-events: none !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* BIG decal: positioned 80px above center - FIXED SIZE */
+  #section-2 img[src="/3.png"],
+  #section-2 .section2-left-bubble,
+  #section-2 .decal-large {
+    top: calc(50% - 80px) !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: clamp(60vw, 70vw, 80vw) !important;
+    height: auto !important;
+    z-index: 5 !important;
+    opacity: 0.8 !important;
+    display: block !important;
+    visibility: visible !important;
+    position: absolute !important;
+    background-image: url('/3.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    min-width: 400px !important;
+    min-height: 400px !important;
+    max-width: clamp(60vw, 70vw, 80vw) !important;
+    max-height: clamp(60vw, 70vw, 80vw) !important;
+  }
+
+  /* SMALL decal: above Any Format heading */
+  #section-2 img[src="/4.png"],
+  #section-2 .section2-right-bubble,
+  #section-2 .decal-small {
+    top: calc(28vh + 110px) !important;
+    left: clamp(-11vw, -9vw, -7vw) !important;
+    width: clamp(65vw, 75vw, 85vw) !important;
+    height: auto !important;
+    z-index: 8 !important;
+    opacity: 0.8 !important;
+  }
+
+  /* Position the container divs */
+  #section-2 .absolute.bottom-0.left-0 {
+    top: calc(50% - 80px) !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 5 !important;
+    display: block !important;
+    visibility: visible !important;
+    position: absolute !important;
+  }
+
+  #section-2 .absolute.top-0.right-0 {
+    top: calc(28vh + 110px) !important;
+    left: clamp(-11vw, -9vw, -7vw) !important;
+    z-index: 8 !important;
+  }
+
+  /* Ensure text stays above decals */
+  #section-2 h3,
+  #section-2 p,
+  #section-2 .heading,
+  #section-2 .body {
+    position: relative !important;
+    z-index: 20 !important;
+  }
+
+
+
+  /* keep Any Format text above decals */
+  #any-format, 
+  #any-format .heading, 
+  #any-format .body { 
+    position: relative; 
+    z-index: 20; 
+  }
+}
+
+/* Tablet and medium screens - use responsive sizes */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .section2-left-bubble {
+    transform: translateX(-50px) translateY(65px) !important;
+    width: clamp(300px, 40vw, 500px) !important;
+    height: auto !important;
+  }
+  
+  .section2-right-bubble {
+    transform: translateX(25px) translateY(215px) !important;
+    width: clamp(200px, 25vw, 350px) !important;
+    height: auto !important;
+  }
+}
+
+/* Desktop only - fixed large sizes */
+@media (min-width: 1024px) {
+  .section2-left-bubble {
+    transform: translateX(-50px) translateY(65px) !important;
+    width: 700px !important;
+    height: 600px !important;
+  }
+  
+  .section2-right-bubble {
+    transform: translateX(25px) translateY(215px) !important;
+    width: 480px !important;
+    height: 480px !important;
+  }
+  
+  /* Any Format section specific positioning */
+  #any-format .decal-large {
+    transform: translateX(-80px) translateY(40px) !important;
+    width: 600px !important;
+    height: 500px !important;
+    z-index: 5 !important;
+  }
+  
+  #any-format .decal-small {
+    transform: translateX(50px) translateY(-10px) !important;
+    width: 400px !important;
+    height: 400px !important;
+    z-index: 5 !important;
+  }
+  
+  #any-format .heading {
+    z-index: 10 !important;
+    position: relative;
+  }
+  
+  #any-format .body {
+    z-index: 10 !important;
+    position: relative;
+  }
+}

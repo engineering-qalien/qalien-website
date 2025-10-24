@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { sendWaitlistEmail } from '../utils/emailService';
+import setAnchors from '../utils/mobileAnchors';
 
 export default function HomePage() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,11 @@ export default function HomePage() {
     email: '',
     company: ''
   });
+
+  // Set mobile anchors for section 2 positioning
+  useEffect(() => {
+    setAnchors();
+  }, []);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
 
@@ -84,10 +90,7 @@ export default function HomePage() {
             <img 
               src="/1.png" 
               alt="Abstract bubble structure" 
-              className="w-[200px] h-[150px] sm:w-[500px] sm:h-[400px] md:w-[800px] md:h-[600px] object-contain opacity-85"
-              style={{
-                transform: 'translateY(-20px) translateX(60px)'
-              }}
+              className="w-[300px] h-[225px] sm:w-[600px] sm:h-[450px] md:w-[900px] md:h-[675px] object-contain opacity-85 hero-bubble"
             />
           </div>
 
@@ -100,7 +103,7 @@ export default function HomePage() {
           </h1>
 
           {/* Descriptive Text */}
-          <p className="relative z-20 text-[#F2C94C] text-sm sm:text-lg md:text-xl lg:text-2xl uppercase tracking-wider max-w-4xl mx-auto leading-relaxed mb-12 sm:mb-24 mt-4 sm:mt-8 px-4">
+          <p className="relative z-20 text-[#F2C94C] text-base sm:text-xl md:text-2xl lg:text-3xl uppercase tracking-wider max-w-4xl mx-auto leading-relaxed mb-12 sm:mb-24 mt-4 sm:mt-8 px-4 font-bold">
             A BRAND EXPERIENCE PLATFORM THAT ACCELERATES MODERN MARKETING TEAMS' ABILITY TO REVIEW AND APPROVE CREATIVE
           </p>
 
@@ -120,10 +123,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="relative bg-gradient-to-b from-green-300 to-green-500 min-h-screen px-4 sm:px-8 overflow-hidden flex flex-col justify-center">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-20 relative z-10 mb-8 sm:mb-16">
+      <section id="section-2" className="relative bg-gradient-to-b from-green-300 to-green-500 min-h-screen px-4 sm:px-8 overflow-visible flex flex-col justify-center py-12 sm:py-12 md:py-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 sm:gap-20 md:gap-28 relative z-10 mb-24 sm:mb-28">
           {/* Top Left Section */}
-          <div className="relative z-20 flex justify-start">
+          <div id="creative-review" className="relative z-20 flex justify-start">
             <div className="max-w-sm">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#1F3440] text-left font-syne">
                 CREATIVE REVIEW IN MINUTES, NOT DAYS
@@ -135,7 +138,7 @@ export default function HomePage() {
           </div>
 
           {/* Top Right Section */}
-          <div className="relative z-20 flex justify-start md:justify-end">
+          <div id="lightweight" className="relative z-20 flex justify-start md:justify-end mt-24">
             <div className="max-w-sm">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#1F3440] text-left md:text-right font-syne">
                 LIGHTWEIGHT, BUILT TO WIN
@@ -148,38 +151,32 @@ export default function HomePage() {
         </div>
 
         {/* Bottom Section */}
-        <div className="max-w-4xl mx-auto relative z-20 flex justify-start">
-          <div className="max-w-sm">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-left text-[#1F3440] font-syne">
+        <div id="any-format" className="max-w-4xl mx-auto relative z-20 flex justify-start mt-4 sm:mt-8" style={{ transform: 'translateX(0px)' }}>
+          <div className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
+            <h3 id="any-format-heading" className="heading text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-left text-[#1F3440] font-syne">
               ANY FORMAT, ALWAYS IN CONTROL
             </h3>
-            <p className="text-[#0E1B2B] text-base sm:text-lg leading-relaxed text-left font-montserrat">
+            <p id="any-format-body" className="body text-[#0E1B2B] text-base sm:text-lg leading-relaxed text-left font-montserrat">
               From logos, colors, and layout to tone, claims, and brand voice, QAlien ensures every asset aligns with your brand guidelines and creative briefs — especially across UGC, creator content, and AI-generated campaigns.
             </p>
           </div>
         </div>
 
         {/* Left Bubble Structure */}
-        <div className="absolute bottom-0 left-0 pointer-events-none opacity-75">
+        <div className="absolute bottom-0 left-0 pointer-events-none">
           <img 
             src="/3.png" 
             alt="Abstract bubble structure" 
-            className="w-[200px] h-[150px] sm:w-[500px] sm:h-[450px] md:w-[700px] md:h-[600px] object-contain"
-            style={{
-              transform: 'translateX(-50px) translateY(25px)'
-            }}
+            className="w-[200px] h-[150px] sm:w-[500px] sm:h-[450px] md:w-[700px] md:h-[600px] object-contain section2-left-bubble decal-large"
           />
         </div>
 
         {/* Right Bubble Structure */}
-        <div className="absolute top-0 right-0 pointer-events-none opacity-75">
+        <div className="absolute top-0 right-0 pointer-events-none">
           <img 
             src="/4.png" 
             alt="Abstract bubble structure" 
-            className="w-[150px] h-[150px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] object-contain"
-            style={{
-              transform: 'translateX(25px) translateY(-25px)'
-            }}
+            className="w-[80px] h-[80px] sm:w-[350px] sm:h-[350px] md:w-[500px] md:h-[500px] object-contain section2-right-bubble decal-small"
           />
         </div>
 
@@ -197,25 +194,25 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-16 items-center relative z-10">
           {/* Left side - Title and Bubble */}
           <div className="relative order-1">
-            <div className="space-y-2 sm:space-y-4">
+            <div className="space-y-2 sm:space-y-4 waitlist-text" style={{ transform: 'translateY(-40px)' }}>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0E1B2B] leading-none">JOIN</h2>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0E1B2B] leading-none">OUR</h2>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0E1B2B] leading-none">WAITLIST</h2>
             </div>
             
             {/* Bubble Structure */}
-            <div className="absolute top-0 left-0 pointer-events-none opacity-80" style={{ transform: 'translateY(50px)' }}>
+            <div className="absolute top-0 left-0 pointer-events-none opacity-80">
               <img 
                 src="/2.png" 
                 alt="Abstract bubble structure" 
-                className="w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] object-contain"
+                className="w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] object-contain waitlist-bubble"
               />
             </div>
           </div>
 
           {/* Right side - Form */}
           <div className="relative z-20 order-2">
-            <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8 max-w-md">
+            <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8 max-w-md waitlist-form">
               {/* Name Fields */}
               <div>
                 <label className="block text-base sm:text-lg font-medium mb-2 text-[#0E1B2B]">Name (required)</label>
